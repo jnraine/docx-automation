@@ -19,7 +19,7 @@ describe Docx::Automation do
 
   let(:support_path) { Pathname(__FILE__).parent.parent.join("support") }
 
-  xit "generates things" do
+  it "generates things" do
     tmp_doc = Docx::Automation.render(
       template: doc_path("id.docx"),
       data: {
@@ -32,7 +32,7 @@ describe Docx::Automation do
     `open #{tmp_doc}`
   end
 
-  xit "does cool things with tables" do
+  it "does cool things with tables" do
     tmp_doc = Docx::Automation.render(
       template: doc_path("table.docx"),
       data: {
